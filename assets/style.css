@@ -1,42 +1,101 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-.jumbotron {
+/* Media Screen */
+
+@media screen and (max-width: 600px) {
+  nav {
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+    padding: 10px;
+  }
+  nav .btn {
+    margin-top: 30px;
+    width: 50%;
+  }
+  .topbar {
+    display: flex;
+  }
+  .card-wrapper {
+    width: 80%;
+    margin-top: -100px;
+  }
+  .card-wrapper button,
+  select {
+    min-width: 100%;
+  }
+  .card-wrapper select {
+    margin-bottom: 10px;
+  }
+  .card-wrapper .text-card {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .card-wrapper {
+    width: 60vw;
+  }
+  .card-wrapper select {
+    min-width: 100%;
+    }
+  .card-wrapper select {
+    margin-bottom: 10px;
+  }
+  .card-wrapper .text-card {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .card-wrapper button {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    text-align: center;
+  }
+  nav .btn {
+    margin-top: 30px;
+    width: 50%;
+  }
+}
+
+
+/* ------ */
+
+/* Section */
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* Image Jumbotron */
+.jumbotron { 
   background: url("./images/mains.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
 }
 
-.content {
-  padding-bottom: 100px;
-}
-.content .title {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-.content .sec-title {
-  margin-top: 30px;
-  font-size: 1.2rem;
-  line-height: 30px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.7);
-}
+/*  Card After Jumbotron */
 .card-wrapper {
-  width: 50vw;
+  width: 40vw;
   margin-top: -70px;
   margin-bottom: 70px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .card-wrapper select {
   margin-right: 20px;
@@ -46,26 +105,41 @@ html {
   font-size: 1.5rem;
 }
 
+/* Content */
+.content {
+  padding-bottom: 100px;
+}
+.content .title {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+}
+.content .sec-title {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Promo Section */
 #promo-fitur {
   background-color: rgba(128, 128, 128, 0.1);
 }
 #promo-fitur h6 {
   margin-top: 50px;
 }
-
 #promo-whyus {
   padding-bottom: 70px !important;
 }
 
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
+/* Destination */
 #destination {
   padding-bottom: 100px;
   background-color: rgba(128, 128, 128, 0.1) !important;
 }
+
+/* Loader */
+
 
 #loader-wrapper {
   position: fixed;
@@ -174,45 +248,4 @@ section {
   visibility: hidden;
   transform: translateY(-100%);
   transition: all 0.3s 1s ease-out;
-}
-
-@media screen and (max-width: 600px) {
-  nav {
-    text-align: center;
-    padding-bottom: 10px;
-    color: black;
-    font-weight: 600;
-    padding: 10px;
-  }
-  nav .btn {
-    margin-top: 30px;
-    width: 50%;
-  }
-  .topbar {
-    display: flex;
-  }
-  .card-wrapper {
-    width: 80%;
-  }
-  .card-wrapper button,
-  select {
-    min-width: 100%;
-  }
-  .card-wrapper select {
-    margin-bottom: 10px;
-  }
-  .card-wrapper .text-card {
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  nav {
-    text-align: center;
-  }
-  nav .btn {
-    margin-top: 30px;
-    width: 50%;
-  }
 }
